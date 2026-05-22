@@ -8,7 +8,7 @@ Production-grade software. Real people will use it. Do not cut corners. (See `.a
 
 ## TL;DR — what to do on wake
 
-1. Finish reading this doc, then check the harness task list and the GitHub issues.
+1. Finish reading this doc, then resume work from the task list and the issues. If the harness has no task list, the **State snapshot** below is your task list. If the repo has no git remote, work is tracked in on-disk issue stand-ins (see `.agentsmith/methodology/issue-driven-work.md`).
 2. `<the current objective, in one or two lines>`
 
 ## State snapshot

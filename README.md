@@ -33,13 +33,22 @@ It reads `.agentsmith/start-here.md` → `pm-setup.md`, assembles its team, and 
 agentsmith/
 ├── setup.md               first-time setup procedure
 ├── VERSION                the agentsmith version stamp
-├── start-here.md          the local router (embedded into .agentsmith/)
-├── pm-setup.md            the PM session flow (embedded into .agentsmith/)
+├── start-here.md          the local router (copied into .agentsmith/)
+├── pm-setup.md            the PM session flow (copied into .agentsmith/)
 ├── bootstrap/
-│   └── plugin-checklist.md  the Claude + Codex plugin/MCP health-check
-├── methodology/           how PMs work — embedded into every repo
+│   └── plugin-checklist.md  the Claude + Codex plugin/MCP health-check (not copied into repos)
+├── methodology/           how PMs work — copied verbatim into every repo
 └── templates/             board, context-reload, reflections — instantiated per repo
 ```
+
+## Where to go next
+
+| You want to… | Start here |
+|---|---|
+| Set up a new repo | `setup.md` |
+| Begin a PM session in an already-set-up repo | `.agentsmith/start-here.md` (in the target repo) |
+| Understand the methodology | `methodology/` |
+| Check or install plugins | `bootstrap/plugin-checklist.md` |
 
 ## Built with its own methodology
 

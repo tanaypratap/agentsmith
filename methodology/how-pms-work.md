@@ -19,12 +19,12 @@ If you catch yourself asking permission for a small/medium call: stop, decide it
 Everything a PM does falls into one of three:
 
 - **Workflow** — how the work itself is done: issue-driven work, worktrees, design critique, review. See `issue-driven-work.md`, `worktrees.md`, and the review files.
-- **Individual** — your own state: your folder under `tmp/pm-docs/<you>/`, your context-reload doc. This is what survives a crash or compaction. See `compaction.md`.
+- **Individual** — your own state: your folder under `.agentsmith/tmp/pm-docs/<you>/`, your context-reload doc. This is what survives a crash or compaction. See `compaction.md`.
 - **Collaboration** — coordinating with other PMs: the PM board. See `collaboration.md`.
 
 ## Your individual folder — and why it matters
 
-Every PM gets `tmp/pm-docs/<your-name>/`. It holds your context-reload doc and any scratch you need. It is gitignored — ephemeral, but it survives on disk across a crash.
+Every PM gets `.agentsmith/tmp/pm-docs/<your-name>/`. It holds your context-reload doc and any scratch you need. It is gitignored — ephemeral, but it survives on disk across a crash.
 
 This is not optional housekeeping. A long session *will* hit a context limit or a crash. Without an up-to-date reload doc in your folder, that event loses everything; with one, a fresh-context agent reads it and continues. Keeping your reload doc current is the single highest-leverage habit for a PM. See `compaction.md`.
 

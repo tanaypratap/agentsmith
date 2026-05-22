@@ -31,3 +31,5 @@ An autonomous PM stops when one of these is true:
 ## Telling which mode you are in
 
 The human's instruction sets it. "Let's think through X" / rapid back-and-forth = Co-PM. "Go, don't wait for me" / "set this goal and pursue it" = autonomous. If it is ambiguous, ask once, then commit to the mode.
+
+**If asking is not possible** (non-interactive run, no human present): default to autonomous mode. Record the assumption at the top of your context-reload doc so the human can correct it on the next check-in.

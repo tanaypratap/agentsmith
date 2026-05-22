@@ -37,6 +37,17 @@ An agent will be handed this ticket cold — it must set that agent up to succee
 
 If two competent agents handed the same ticket would build meaningfully different things, the ticket is not done.
 
+## Remote-less fallback
+
+If `git remote -v` is empty and `gh repo view` fails with "no git remotes found," GitHub issues have no surface to land on. Use the on-disk stand-in:
+
+1. Create `.agentsmith/tmp/pm-docs/<your-name>/issues/` if it does not exist.
+2. For each piece of work, create a file there — e.g. `issue-001-<slug>.md` — structured as a well-formed ticket: Scope, Deliverables, Context, Acceptance criteria.
+3. Record implementation evidence and review trail as appended sections in the same file (or linked companion files in the same folder).
+4. When a remote exists, migrate: create the real GitHub issue from the on-disk spec, carry over the evidence/review trail as comments, and delete the local stand-in.
+
+GitHub issues are always the default when a remote is present. The on-disk stand-in is a temporary bridge, not a permanent alternative.
+
 ## Boundary with review
 
 This file owns *that* work happens on issues and *how* issues are linked. The format and rubric of a review comment is owned by the review files (`code-review.md`, `architecture.md`, `qa.md`, `design-critique.md`).

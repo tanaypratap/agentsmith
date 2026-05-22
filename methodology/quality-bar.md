@@ -14,10 +14,11 @@ The fix is not a mechanical gate. It is **re-grounding context** — keeping the
 
 ## The adherence model
 
-- **Claude agents** — set up a reminder `/loop` at session start (see `pm-setup.md`) that periodically re-surfaces the Standard. The loop re-injects this bar on a cadence, so drift cannot accumulate unnoticed.
-- **Codex agents** — no live loop; the Standard rides in your context-reload doc (see `compaction.md`). Every reload and every compaction re-grounds you on it.
+- **Claude agents (interactive / long-running session)** — start the reminder `/loop` at session start (see `pm-setup.md`, the reminder step): `/loop 15m read .agentsmith/methodology/quality-bar.md`. The loop re-injects this bar on a cadence, so drift cannot accumulate unnoticed.
+- **Claude agents (bounded / non-interactive session, or `/loop` unavailable)** — embed this quality-bar section at the top of your context-reload doc. Every reload re-grounds you on the standard — the same effect without a live loop.
+- **Codex agents** — no live loop; confirm your context-reload doc carries this quality-bar section (the template includes it). Every reload and every compaction re-grounds you on it. There is nothing to start.
 
-Both mechanisms do the same job: restructure context so the quality bar is never buried.
+All three paths do the same job: restructure context so the quality bar is never buried. See `pm-setup.md` for the exact setup step, and `compaction.md` for keeping the reload doc current.
 
 ## In practice
 

@@ -21,12 +21,15 @@ Staff per need. A pure-documentation task may need only the PM and an adversaria
 A reviewer or QA is **spawned as an independent sub-agent** — never the same session that produced the work.
 
 - **Claude:** use the Agent / Task tool — it runs in an isolated context.
-- **Codex:** start a separate `codex exec` run (a fresh non-interactive invocation), or a new Codex session, given the work plus the rubric.
-- **Fallback (either tool):** if no sub-agent primitive is available, the human opens a fresh session and hands it the work. The one requirement: the reviewer is a process that never saw the producer's reasoning.
+- **Codex — general reviewer (architecture / QA / design):** start a fresh `codex exec` run (a non-interactive invocation) given the work plus the rubric. This is the standard path for all reviewer roles.
+- **Codex — code review specifically:** `codex review` is a built-in code-review command. Use it for reviewing code diffs. For all other reviewer roles (architecture, QA, design), use the `codex exec` path above.
+- **Fallback (last resort, either tool):** if no sub-agent primitive is available at all, the human opens a fresh session and hands it the work. The one requirement: the reviewer is a process that never saw the producer's reasoning.
 
 Give the sub-agent the work plus the relevant rubric; it returns a scored review. Because it never saw the producer's reasoning, it cannot inherit the producer's blind spots. *That independence is the entire point* — it is what makes a reviewer adversarial rather than a rubber stamp. A reviewer that shares the producer's context is not a reviewer.
 
 This mechanism is what the no-self-scoring rule rests on: the producer never scores its own work; the score always comes from a fresh-context sub-agent.
+
+**If no fresh-context mechanism is available at all** (no sub-agent tool, no human available): autonomous mode cannot reach "done" on review-gated work. Do not skip the gate and do not self-score. Surface the block explicitly — record it on the issue (or on-disk stand-in) and send a human notification. The work stays open until a review runs.
 
 ## Running the team
 
