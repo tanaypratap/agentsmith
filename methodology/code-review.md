@@ -18,9 +18,9 @@ Score /10 across these dimensions; quote the specific code behind each finding:
 - **Error handling** — inputs validated, failures handled, nothing swallowed silently.
 - **Tests** — is the change covered, and do the tests verify behaviour rather than restate the code?
 
-**Passing bar: 8/10, zero blockers.**
+**Scoring.** Rate each dimension **Strong / Adequate / Weak**, then compute `score = 10 − (1.5 × Adequate) − (3 × Weak)`, rounded, floored at 1.
 
-Separate **blockers** (must fix before merge) from **polish** (worth doing, not gating). Surface at most the ~10 most important findings, blockers first; prioritize, do not dump.
+**The gate is blockers, not the number.** A finding is a **blocker** if it would hurt a real user or if any dimension is rated Weak; the change is done when it has zero unresolved blockers. The /10 is a quality signal — a low score with no blockers means "shippable but weak," not "rejected." Separate blockers from **polish** (worth doing, not gating); surface at most the ~10 most important findings, blockers first, prioritized — do not dump.
 
 ## No self-scoring
 

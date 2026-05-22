@@ -19,7 +19,8 @@ Staff per need. A pure-documentation task may need only the PM and an adversaria
 A reviewer or QA is **spawned as an independent sub-agent** — never the same session that produced the work.
 
 - **Claude:** use the Agent / Task tool — it runs in an isolated context.
-- **Codex:** use its sub-agent equivalent.
+- **Codex:** start a separate `codex exec` run (a fresh non-interactive invocation), or a new Codex session, given the work plus the rubric.
+- **Fallback (either tool):** if no sub-agent primitive is available, the human opens a fresh session and hands it the work. The one requirement: the reviewer is a process that never saw the producer's reasoning.
 
 Give the sub-agent the work plus the relevant rubric; it returns a scored review. Because it never saw the producer's reasoning, it cannot inherit the producer's blind spots. *That independence is the entire point* — it is what makes a reviewer adversarial rather than a rubber stamp. A reviewer that shares the producer's context is not a reviewer.
 

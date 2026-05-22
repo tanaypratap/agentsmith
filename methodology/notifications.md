@@ -30,8 +30,9 @@ Do **not** notify for every small command. Reserve it for status and attention m
 
 The spoken `say` is governed by time of day; the silent `osascript` notification stays on always.
 
-- **Day** — `say` on.
-- **Overnight, idle** — `say` off. Do not talk into an empty, sleeping room.
-- **Overnight, an autonomous coding run active** — `say` on, so blockers and milestones are still announced.
+- **Day** (09:00–22:00 local) — `say` on.
+- **Overnight, a human in the loop** (e.g. a late-night Co-PM session) — `say` on; the human is there to hear it.
+- **Overnight, an autonomous run active, no human present** — `say` on, so blockers and milestones still surface.
+- **Overnight, idle** (no autonomous run, no human) — `say` off. Do not talk into an empty, sleeping room.
 
-"Day" vs "overnight" is local wall-clock; the boundary is 09:00–22:00 = day.
+Rule of thumb: `say` is on whenever a human can hear it or an autonomous run needs to surface something; off only overnight when nothing is running and nobody is there.

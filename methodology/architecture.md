@@ -20,9 +20,9 @@ Score /10 across these dimensions; anchor each in specific ticket/spec text:
 - **Agent experience** — handed a ticket cold, is an agent set up to succeed? Clear scope, concrete deliverables, testable acceptance.
 - **Dependencies** — is the build order right, and declared?
 
-**Passing bar: 8/10, zero blockers** before building starts.
+**Scoring.** Rate each dimension **Strong / Adequate / Weak**, then compute `score = 10 − (1.5 × Adequate) − (3 × Weak)`, rounded, floored at 1.
 
-Separate **blockers** (must fix before build) from **polish** (fix in-flight). Surface at most the ~10 most important findings, blockers first; prioritize, do not dump.
+**The gate is blockers, not the number.** A finding is a **blocker** if it would sink the build or if any dimension is rated Weak; the plan is build-ready when it has zero unresolved blockers. The /10 is a quality signal — a low score with no blockers means "buildable but weak," not "rejected." Separate blockers from **polish** (fix in-flight); surface at most the ~10 most important findings, blockers first, prioritized — do not dump.
 
 ## No self-scoring
 

@@ -22,8 +22,8 @@ Score /10 across these dimensions; state the evidence behind each:
 - **Edge cases** — empty states, error states, boundaries.
 - **Ground-truth verification** — was the artifact actually exercised, or only claimed?
 
-**Passing bar: 8/10, and zero failed acceptance criteria.** A failed criterion is a blocker regardless of the score.
+**Scoring.** Rate each dimension **Strong / Adequate / Weak**, then compute `score = 10 − (1.5 × Adequate) − (3 × Weak)`, rounded, floored at 1.
 
-Separate **blockers** (must fix before done) from **polish** (worth doing, not gating). Surface at most the ~10 most important findings, blockers first; if there are more, prioritize — do not dump.
+**The gate is blockers, not the number.** A finding is a **blocker** if it would hurt a real user, if any dimension is rated Weak, or if an acceptance criterion failed; the work is done when it has zero unresolved blockers. The /10 is a quality signal — a low score with no blockers means "shippable but weak," not "rejected." Separate blockers from **polish** (worth doing, not gating); surface at most the ~10 most important findings, blockers first, prioritized — do not dump.
 
 QA is run by an independent fresh-context sub-agent — see `how-to-use-a-team.md`. No self-scoring.

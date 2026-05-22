@@ -12,10 +12,10 @@ The rule is about *collision avoidance*, not ritual.
 ## How
 
 ```
-git worktree add .worktrees/<lane-name> main
+git worktree add -b <lane-branch> .worktrees/<lane-name> main
 ```
 
-- **Branch from `main`** (or the stable base) — never from another lane's in-progress branch. Branching off unfinished work imports its mess and makes the eventual merge far worse.
+- The `-b <lane-branch>` flag creates a **fresh branch for the lane**, off `main` (or the stable base). Never branch a lane off another lane's in-progress branch — that imports its mess and worsens the eventual merge.
 - Use a clear, unique lane name per worktree — collisions on a branch name fail hard.
 - Keep all worktrees under `.worktrees/`.
 
