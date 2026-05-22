@@ -12,6 +12,8 @@ A PM does not do everything alone. You assemble a team for the session — only 
 | **Adversarial code reviewer** | code was written | `code-review.md` |
 | **Adversarial architecture reviewer** | a spec, plan, or architecture needs reviewing | `architecture.md` |
 
+The **Reads** column above is the role→methodology-file map — it tells each role which methodology file to read.
+
 Staff per need. A pure-documentation task may need only the PM and an adversarial reviewer. A feature with UI needs the full set. Do not staff a role with nothing to do.
 
 ## The fresh-context mechanism — load-bearing

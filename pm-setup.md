@@ -14,7 +14,7 @@ You are the PM. Staff a designer / QA / adversarial code reviewer / adversarial 
 
 - If `tmp/pm-board.md` exists, add your row (Active PMs) and a Current Focus section.
 - If it does not exist and you are the only PM, you do not need a board yet.
-- The board is created lazily: the first PM to see a second PM active creates `tmp/pm-board.md` from `templates/pm-board.template.md` and adds a row for every active PM.
+- The board is created lazily: the first PM to see a second PM active creates `tmp/pm-board.md` from `templates/pm-board.template.md` and adds, for every active PM, an Active-PMs row and a Current Focus section.
 
 See `methodology/collaboration.md`.
 
@@ -29,4 +29,4 @@ Make `tmp/pm-docs/<your-name>/` and create your reload doc there from `templates
 
 ## 6. Start working
 
-Read `methodology/how-pms-work.md` first — it is the umbrella — then the methodology your role and mode need. Then work: issue-driven, reviewed, to the quality bar.
+Read `methodology/how-pms-work.md` first — it is the umbrella — then the methodology your role and mode need: your role's files are in the `how-to-use-a-team.md` map; for your mode, read `operating-modes.md` (plus `compaction.md` if you are autonomous). Then work: issue-driven, reviewed, to the quality bar.

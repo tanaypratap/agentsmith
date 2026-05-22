@@ -32,6 +32,7 @@ It reads `.agentsmith/start-here.md` → `pm-setup.md`, assembles its team, and 
 ```
 agentsmith/
 ├── setup.md               first-time setup procedure
+├── VERSION                the agentsmith version stamp
 ├── start-here.md          the local router (embedded into .agentsmith/)
 ├── pm-setup.md            the PM session flow (embedded into .agentsmith/)
 ├── bootstrap/
