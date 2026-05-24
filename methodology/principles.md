@@ -66,7 +66,7 @@ See `.agentsmith/setup.md` for the embed/instantiate terminology and the populat
 
 After shipping, run a holistic AX review AND an empirical E2E friction test before declaring "good." Reading docs and running them surface different failures — the v0.1 commit-step gap was invisible in a read-through and immediately apparent in a setup run. The loop (ship → AX review + E2E run → triage → ticket review → fix wave → re-verify) is the mechanism for closing the gap between "looks correct" and "runs correctly."
 
-See `validation-loops.md` for the full loop; `examples/v02-validation/` for a worked example; `anti-patterns.md` for the specific failure modes these loops catch.
+See `validation-loops.md` for the full loop; `examples/v02-validation/` (in the agentsmith repo itself; not embedded into target repos — see principle #9's outside-`.agentsmith/` branch) for a worked example; `anti-patterns.md` for the specific failure modes these loops catch.
 
 ---
 

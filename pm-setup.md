@@ -19,15 +19,17 @@ Run `git remote -v`.
 
 ## Step 4 — Decide your team
 
-You are the PM. Staff a designer / QA / adversarial code reviewer / adversarial architecture reviewer only as this session's work needs them. See `.agentsmith/methodology/how-to-use-a-team.md` for the roster and the role→file map.
+You are the PM. Staff a designer / QA / adversarial code reviewer / adversarial architecture reviewer / documentation reviewer only as this session's work needs them. See `.agentsmith/methodology/how-to-use-a-team.md` for the roster and the role→file map.
 
 ## Step 5 — Get on the PM board
 
-- If `.agentsmith/tmp/pm-board.md` exists, add your row (Active PMs) and a Current Focus section.
-- If it does not exist and you are the only PM, you do not need a board yet.
-- The board is created lazily: any PM that becomes aware of a second active PM — including a newcomer — creates `.agentsmith/tmp/pm-board.md` from `.agentsmith/templates/pm-board.template.md` and adds, for every active PM, an Active-PMs row and a Current Focus section.
+The board is created lazily — a solo PM does not need one. Walk this decision in order:
 
-See `.agentsmith/methodology/collaboration.md`.
+- **`.agentsmith/tmp/pm-board.md` exists** → add your Active-PMs row and a Current Focus section.
+- **It does not exist, and you are the only active PM** → no board yet; skip this step. (Create it later if a second PM appears.)
+- **It does not exist, but a second PM is also active** → you (even as a newcomer) create the board now from `.agentsmith/templates/pm-board.template.md`, then add an Active-PMs row and a Current Focus section for every active PM.
+
+See `.agentsmith/methodology/collaboration.md` for the board's structure and the messages/learnings protocols.
 
 ## Step 6 — Create your context-reload doc
 

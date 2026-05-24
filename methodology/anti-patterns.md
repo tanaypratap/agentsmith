@@ -14,7 +14,7 @@ Each entry: **Pattern** (what people do) → **Why it's wrong** (what breaks) �
 
 **Evidence.** v0.1 AX blocker B1 (systematic path ambiguity across `pm-setup.md`, `compaction.md`, `collaboration.md`, `how-pms-work.md`); live-confirmed by v0.1 PM-session E2E friction F1 (from the PM-session friction log, distinct from the setup-E2E log's F1 on plugin checklist) — "bare paths don't resolve from repo root," rated major.
 
-**The fix.** Cross-directory references in `.agentsmith/`-embedded files use the full `.agentsmith/`-rooted form. Sibling references within `methodology/` use bare filename. One rule, applied with zero exceptions. (See principle #9 in `principles.md`.)
+**The fix.** Three branches, one rule: sibling references within the same directory use bare filename; cross-directory references inside `.agentsmith/` use the full `.agentsmith/`-rooted form; references to repo-root content outside `.agentsmith/` (like the agentsmith repo's own `examples/`) use the repo-root-relative form. See principle #9 in `principles.md` for the full statement.
 
 **See also.** `principles.md` principle #9 (sibling-path style); `validation-loops.md`.
 
@@ -98,7 +98,7 @@ Each entry: **Pattern** (what people do) → **Why it's wrong** (what breaks) �
 
 **Evidence.** v0.2 wave-review must-fix MF1 — `notifications.md` used `<YOUR_NAME>` (the human's name) while `pm-setup.md` used `<your-name>` (the PM's handle); the conflation was invisible until the wave review ran the full set against acceptance criteria.
 
-**The fix.** Name placeholders unambiguously. When both appear in the same file or same reader journey, disambiguate inline: "`<YOUR_NAME>` = the human's name; `<your-name>` = your PM handle (the filesystem slug you chose in pm-setup step 2)."
+**The fix.** Name placeholders unambiguously. When both appear in the same file or same reader journey, disambiguate inline: "`<YOUR_NAME>` = the human's name; `<your-name>` = your PM handle (the filesystem slug you chose during PM setup)."
 
 **See also.** `notifications.md` (the fixed version, which calls out the distinction explicitly).
 
@@ -110,7 +110,7 @@ Each entry: **Pattern** (what people do) → **Why it's wrong** (what breaks) �
 
 **Why it's wrong.** Every duplicated statement is a future drift hazard. When the canonical file updates, the copy does not. A reader who follows the cross-reference and finds a different statement now has two authorities in conflict and cannot tell which is right.
 
-**Evidence.** The pattern surfaced in the v0.2 triage when five different tickets (#11, #12, #14, #16, #17) all needed to edit `pm-setup.md`. The v0.2 ticket-review must-fix MF1 required all five `pm-setup.md` edits to land in **one wave on one agent**, with #16's re-sequence authoritative — so re-sequencing and step rewrites by different agents could not silently conflict. The risk being prevented was structural drift: five agents editing the same file independently inevitably diverge, and the divergence is invisible until the file ships.
+**Evidence.** This is a *preventive* anti-pattern — the discipline against it shows up in agentsmith's design choices, not in a single failed finding. The closest concrete analog in the v0.2 trail is the ticket-review's MF1: when five different tickets (#11, #12, #14, #16, #17) all needed to edit `pm-setup.md`, the review required all five edits to land in **one wave on one agent** so re-sequencing and step rewrites by different agents could not silently conflict. That is the same discipline (one canonical home, everything else coordinates with it) applied to *file editing* rather than to *content authoring*. The general rule is enforced inside the docs themselves by `docs-review.md`'s **scope coherence** dimension, which scores duplicate-canonical-content as a defect.
 
 **The fix.** Every concept has ONE canonical home. Everything else points at it. A new methodology file's job is a job no existing file already does; where it overlaps with an existing file, it cross-links. `docs-review.md`'s accuracy/no-rot dimension makes this a scored rubric criterion.
 

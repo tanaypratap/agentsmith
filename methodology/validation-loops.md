@@ -4,7 +4,7 @@ The post-ship loop agentsmith proved on itself during v0.2. Run it after shippin
 
 > **ship → holistic AX review + empirical E2E friction test → triage → adversarial ticket review → fix wave → re-verify**
 
-For a worked example of this loop applied to agentsmith itself, see `examples/v02-validation/README.md`. For the anti-patterns these loops exist to catch, see `anti-patterns.md`.
+For a worked example of this loop applied to agentsmith itself, see `examples/v02-validation/README.md` (in the agentsmith repo; not embedded into target repos). For the anti-patterns these loops exist to catch, see `anti-patterns.md`.
 
 ---
 

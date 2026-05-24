@@ -34,7 +34,7 @@ An Open Ask is a cross-PM request: who → whom, what, status. Mark it **closed*
 ## Two-layer reflections
 
 - **Layer 1 — board `## Learnings`.** Tactical, in-the-moment: "this bit me, here is the lesson." Ephemeral with the board.
-- **Layer 2 — `reflections.md`** (committed, at `.agentsmith/reflections.md`; created by setup from a template — see the epic's embed-vs-instantiate rule). The deep periodic retrospective, owned by all PMs on the repo. Durable.
+- **Layer 2 — `reflections.md`** (committed, at `.agentsmith/reflections.md`; created by setup from a template — see the embed/instantiate terminology in `.agentsmith/setup.md`). The deep periodic retrospective, owned by all PMs on the repo. Durable.
 
 **Promotion:** when a layer-1 learning recurs — you see it twice, or it is clearly not a one-off — promote it into `.agentsmith/reflections.md` as a considered reflection. Layer 1 is the scratchpad; layer 2 is what the repo durably knows.
 

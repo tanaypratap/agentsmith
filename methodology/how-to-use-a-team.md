@@ -21,7 +21,7 @@ Staff per need. A pure-documentation task may need only the PM and an adversaria
 
 A reviewer or QA is **spawned as an independent sub-agent** — never the same session that produced the work.
 
-- **Claude:** use the Agent / Task tool — it runs in an isolated context.
+- **Claude:** use the Agent / Task tool — it runs in an isolated context. (Verify your harness actually exposes this tool first; if it does not, fall through to the no-mechanism case below — do not assume.)
 - **Codex — general reviewer (architecture / QA / design):** start a fresh `codex exec` run (a non-interactive invocation) given the work plus the rubric. This is the standard path for all reviewer roles.
 - **Codex — code review specifically:** `codex review` is a built-in code-review command. Use it for reviewing code diffs. For all other reviewer roles (architecture, QA, design), use the `codex exec` path above.
 - **Fallback (last resort, either tool):** if no sub-agent primitive is available at all, the human opens a fresh session and hands it the work. The one requirement: the reviewer is a process that never saw the producer's reasoning.
