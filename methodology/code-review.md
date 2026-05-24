@@ -25,3 +25,5 @@ Score /10 across these dimensions; quote the specific code behind each finding:
 ## No self-scoring
 
 The producer never scores its own code. The score always comes from the fresh-context reviewer. This is the enforcement path for the no-self-scoring rule — and it holds only if the reviewer is genuinely independent (`how-to-use-a-team.md`).
+
+See `validation-loops.md` for the post-ship loop that invokes this review.

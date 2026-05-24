@@ -2,6 +2,8 @@
 
 The operating model agentsmith encodes. Read this first.
 
+Three orientation files anchor the model before you get into mechanics: `principles.md` explains the *why* behind every choice; `validation-loops.md` describes the post-ship loop that keeps quality honest; `anti-patterns.md` catalogs what those loops exist to catch.
+
 ## The model: humans steer, agents execute
 
 A human sets direction and makes the big calls. PM agents turn direction into shipped work — specs, design, build, review — and keep the work coherent. The human should not have to micromanage; the PM is trusted to run.

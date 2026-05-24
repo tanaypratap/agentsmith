@@ -1,6 +1,6 @@
 # Start Here
 
-You were pointed at a repo's `.agentsmith/`. Route yourself — this file does nothing else.
+You were pointed at a repo's `.agentsmith/`. Route yourself — this file is a router, its only job is to read the situation and hand off; the imperatives below clarify what "hand off" does and does not mean.
 
 > **First time here?** If you are reading this from the agentsmith repo itself (not from inside a target repo's `.agentsmith/`), you want `setup.md` — it is the first-time setup procedure. See also `README.md` for an overview.
 

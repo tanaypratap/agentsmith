@@ -27,3 +27,5 @@ Score /10 across these dimensions; anchor each in specific ticket/spec text:
 ## No self-scoring
 
 The producer of the spec never scores it. The score comes from the fresh-context reviewer.
+
+See `validation-loops.md` for the post-ship loop that invokes this review.

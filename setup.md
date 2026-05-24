@@ -19,7 +19,7 @@ Run the checklist in `bootstrap/plugin-checklist.md`. Verify the Claude Code and
 
 Look for `.agentsmith/VERSION` in the target repo.
 
-- **It exists** → this repo is already set up (a completed setup always writes `VERSION` last). Report "already set up" and stop. (v0.1 does not re-sync; that is deferred to v2.)
+- **It exists** → this repo is already set up (a completed setup always writes `VERSION` last). Report "already set up" and stop. (Re-sync is not yet supported; re-run only to recover from an interrupted setup.)
 - **It does not exist** → continue.
 
 ## 3. Create `.agentsmith/`
@@ -34,17 +34,30 @@ In the target repo, create `.agentsmith/` and populate it **in this order**:
    - Replace `<REPO>` with the target repo's name.
    - Leave the example reflection block (`<DATE>`, `<reflection title>`, `<the situation>`, `<the durable lesson>`, `<the change in practice>`) intact as an in-file example for future PMs — do not fill those in or delete them.
 
-3. **Create** the scratch area `.agentsmith/tmp/`. (The `pm-docs/` subfolder is re-created lazily by `pm-setup.md` when needed — no need to pre-create it.)
-
-4. **Copy** this agentsmith repo's `VERSION` file to `.agentsmith/VERSION` verbatim. This records which agentsmith version set this repo up. **This is the last write — it is the setup completeness marker.**
+3. **Copy** this agentsmith repo's `VERSION` file to `.agentsmith/VERSION` verbatim. This records which agentsmith version set this repo up. **This is the last write — it is the setup completeness marker.**
 
 ## 4. Gitignore the scratch
 
-Add `.agentsmith/tmp/` to the target repo's `.gitignore` (create `.gitignore` if absent). Everything else under `.agentsmith/` is committed; only `tmp/` is ephemeral.
+Add `.agentsmith/tmp/` to the target repo's `.gitignore` (create `.gitignore` if absent). Everything else under `.agentsmith/` is committed; only `tmp/` is ephemeral. (`tmp/` itself is created lazily by `pm-setup.md` at runtime — do not pre-create it or add a `.gitkeep`.)
 
 ## 5. Commit `.agentsmith/`
 
-Stage and commit the new `.agentsmith/` folder and the updated `.gitignore` to the target repo:
+**Pre-check — git identity.** Before committing, verify that git knows who you are:
+
+```
+git config user.email
+git config user.name
+```
+
+If either command returns nothing (empty output), stop and surface this message to the human:
+
+> "git identity is not configured in this repo. Please run:
+> `git config user.email "you@example.com"` and `git config user.name "Your Name"`
+> then re-run setup from step 5."
+
+Do not set global git config silently. The human must set their own identity.
+
+Once both commands return non-empty values, stage and commit:
 
 ```
 git add .agentsmith .gitignore
@@ -62,7 +75,7 @@ Before reporting to the human, run this checklist. All items must pass:
 - [ ] `git check-ignore .agentsmith/tmp/` exits 0 (confirms `tmp/` is gitignored).
 - [ ] The commit created in step 5 is present in `git log --oneline -1`.
 
-Once all items pass, tell the human: `.agentsmith/` created and committed; `methodology/` + `templates/` + entry files copied; `reflections.md` instantiated with the repo name; `tmp/` created and gitignored; `VERSION` recorded. The repo is now agentsmith-enabled — future agents start with `.agentsmith/start-here.md`, not this setup.
+Once all items pass, tell the human: `.agentsmith/` created and committed; `methodology/` + `templates/` + entry files copied; `reflections.md` instantiated with the repo name; `tmp/` gitignored (created lazily at first PM session); `VERSION` recorded. The repo is now agentsmith-enabled — future agents start with `.agentsmith/start-here.md`, not this setup.
 
 ---
 
@@ -75,23 +88,27 @@ Once all items pass, tell the human: `.agentsmith/` created and committed; `meth
 ├── pm-setup.md                ← PM session flow
 ├── reflections.md             ← repo-specific retrospective (instantiated from template)
 ├── methodology/               ← how PMs work — all files copied verbatim
+│   ├── anti-patterns.md
 │   ├── architecture.md
 │   ├── code-review.md
 │   ├── collaboration.md
 │   ├── compaction.md
 │   ├── design-critique.md
+│   ├── docs-review.md
 │   ├── how-pms-work.md
 │   ├── how-to-use-a-team.md
 │   ├── issue-driven-work.md
 │   ├── notifications.md
 │   ├── operating-modes.md
+│   ├── principles.md
 │   ├── qa.md
 │   ├── quality-bar.md
+│   ├── validation-loops.md
 │   └── worktrees.md
 ├── templates/                 ← board, context-reload, reflections templates
 │   ├── context-reload.template.md
 │   ├── pm-board.template.md
 │   └── reflections.template.md
-└── tmp/                       ← gitignored scratch area (re-created lazily)
+└── tmp/                       ← lazily created by `pm-setup.md`; gitignored
     └── (pm-docs/ and other scratch files appear here at runtime)
 ```

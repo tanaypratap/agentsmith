@@ -4,7 +4,7 @@ How a PM keeps the human updated without the human watching the screen — espec
 
 ## The pattern
 
-Replace `<YOUR_NAME>` with the human's name — the person the PM reports to. It comes from how the human addressed you in their own instructions at session start, **not** from `pm-setup.md` (which sets the *PM's* handle, `<your-name>` — a different placeholder). If the human's name was never given, drop it and use a neutral greeting.
+Replace `<YOUR_NAME>` with the human's name — the person the PM reports to. It comes from how the human addressed you in their own instructions at session start, **not** from `.agentsmith/pm-setup.md` (which sets the *PM's* handle, `<your-name>` — a different placeholder). If the human's name was never given, drop it and use a neutral greeting.
 
 **macOS:**
 

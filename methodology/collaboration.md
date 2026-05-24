@@ -36,11 +36,11 @@ An Open Ask is a cross-PM request: who → whom, what, status. Mark it **closed*
 - **Layer 1 — board `## Learnings`.** Tactical, in-the-moment: "this bit me, here is the lesson." Ephemeral with the board.
 - **Layer 2 — `reflections.md`** (committed, at `.agentsmith/reflections.md`; created by setup from a template — see the epic's embed-vs-instantiate rule). The deep periodic retrospective, owned by all PMs on the repo. Durable.
 
-**Promotion:** when a layer-1 learning recurs — you see it twice, or it is clearly not a one-off — promote it into `reflections.md` as a considered reflection. Layer 1 is the scratchpad; layer 2 is what the repo durably knows.
+**Promotion:** when a layer-1 learning recurs — you see it twice, or it is clearly not a one-off — promote it into `.agentsmith/reflections.md` as a considered reflection. Layer 1 is the scratchpad; layer 2 is what the repo durably knows.
 
 ## PM name
 
-`<your-name>` and `<PM name>` throughout these docs refer to the unique handle you pick at session start (sourced during PM setup — see `pm-setup.md`). The handle identifies your folder under `.agentsmith/tmp/pm-docs/`, your board row, and your reload doc. Rules:
+`<your-name>` and `<PM name>` throughout these docs refer to the unique handle you pick at session start (sourced during PM setup — see `.agentsmith/pm-setup.md`). The handle identifies your folder under `.agentsmith/tmp/pm-docs/`, your board row, and your reload doc. Rules:
 
 - Pick something distinguishable from other active PMs on this repo.
 - The human may assign you a name; if not, derive one from your role or the session goal (e.g. `pm-design`, `pm-alpha`).

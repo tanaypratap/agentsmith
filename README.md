@@ -38,7 +38,8 @@ agentsmith/
 ├── bootstrap/
 │   └── plugin-checklist.md  the Claude + Codex plugin/MCP health-check (not copied into repos)
 ├── methodology/           how PMs work — copied verbatim into every repo
-└── templates/             board, context-reload, reflections — instantiated per repo
+├── templates/             board, context-reload, reflections — instantiated per repo
+└── examples/              worked examples of the methodology in practice (this repo only; not copied)
 ```
 
 ## Where to go next
@@ -48,6 +49,7 @@ agentsmith/
 | Set up a new repo | `setup.md` |
 | Begin a PM session in an already-set-up repo | `.agentsmith/start-here.md` (in the target repo) |
 | Understand the methodology | `methodology/` |
+| See the methodology lived — a worked example | `examples/v02-validation/` |
 | Check or install plugins | `bootstrap/plugin-checklist.md` |
 
 ## Built with its own methodology

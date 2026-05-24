@@ -27,3 +27,5 @@ Score /10 across these dimensions; state the evidence behind each:
 **The gate is blockers, not the number.** A finding is a **blocker** if it would hurt a real user, if any dimension is rated Weak, or if an acceptance criterion failed; the work is done when it has zero unresolved blockers. The /10 is a quality signal — a low score with no blockers means "shippable but weak," not "rejected." Separate blockers from **polish** (worth doing, not gating); surface at most the ~10 most important findings, blockers first, prioritized — do not dump.
 
 QA is run by an independent fresh-context sub-agent — see `how-to-use-a-team.md`. No self-scoring.
+
+See `validation-loops.md` for the post-ship loop that invokes this review.
