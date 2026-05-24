@@ -7,7 +7,7 @@ A reader who finishes this document should understand:
 - why each phase exists (what it catches that the prior phase missed);
 - how to recognize the same patterns in their own work.
 
-The three review documents in this directory — `ax-review.md`, `ticket-review.md`, `ax-rereview.md` — are the actual reviews. At each phase below, the document to study is named.
+The five artifact documents in this directory — `ax-review.md`, `e2e-setup-friction.md`, `e2e-pmsession-friction.md`, `ticket-review.md`, `ax-rereview.md` — are the actual reviews and friction logs. At each phase below, the document to study is named.
 
 **How to read this document.** Read the narrative first, end to end — the score progression is the spine, and each phase opens with a one-line summary of what it caught that the prior phase missed. Then open the artifact files as the narrative directs and study them as examples of what a real adversarial review *looks like*. The narrative is the *teaching*; the artifacts are the *evidence*. Both matter — a teaching without evidence is opinion, and evidence without teaching is hard to apply to your own work.
 
@@ -44,6 +44,8 @@ The holistic review caught these because it read the system as a whole, not file
 ## Phase 2: The E2E friction tests
 
 Two separate friction tests ran in parallel with the AX review: one for first-time setup, one for a PM session. Together they logged 18 frictions.
+
+**Documents to study: `e2e-setup-friction.md` and `e2e-pmsession-friction.md`.** Both are the raw friction logs as the fresh agent wrote them in real time — actions taken, frictions hit, severity tags, end state. The signal you are looking for: each friction is anchored in a *specific step* the agent attempted, not a general impression; the severity rating is paired with a literal failure mode (what command broke, what file would not resolve); and the verdict at the end is honest about whether the flow completed unaided.
 
 The setup friction test found F7 — **no commit step** — which the AX review had not flagged as a blocker. The setup docs stated "`.agentsmith/` is set up" without providing the `git add / git commit` step to make it durable. This was the single biggest setup gap, rated major, and it was invisible in a read-through. It showed up immediately when someone actually ran setup.
 

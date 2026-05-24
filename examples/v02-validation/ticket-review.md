@@ -6,9 +6,9 @@ faithful, complete, build-ready plan? Read-only review; no issues or repos
 modified.
 
 Source docs audited against:
-- `agentsmith-ax-review.md` — holistic AX review, 5.5/10, findings B1, B2, M1–M4, m1–m5.
-- `agentsmith-e2e-setup-friction.md` — first-time-setup friction log, F1–F10.
-- `agentsmith-e2e-pmsession-friction.md` — PM-session friction log, F1–F8.
+- `ax-review.md` — holistic AX review, 5.5/10, findings B1, B2, M1–M4, m1–m5.
+- `e2e-setup-friction.md` — first-time-setup friction log, F1–F10.
+- `e2e-pmsession-friction.md` — PM-session friction log, F1–F8.
 
 ---
 

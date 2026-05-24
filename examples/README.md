@@ -6,7 +6,7 @@ Worked examples of agentsmith methodology in practice. Where the `methodology/` 
 
 | Directory | What it shows |
 |---|---|
-| `v02-validation/` | The v0.1 → v0.2 validation loop: holistic AX review (5.5/10), E2E friction tests, triage, adversarial ticket review, fix wave, re-verify (8.5/10). Start with `v02-validation/README.md`. |
+| `v02-validation/` | The v0.1 → v0.2 validation loop: holistic AX review (5.5/10), two E2E friction tests, triage, adversarial ticket review, fix wave, re-verify (8.5/10). Start with `v02-validation/README.md`; the directory contains 5 sanitized artifact files (`ax-review.md`, two E2E friction logs, `ticket-review.md`, `ax-rereview.md`) plus the narrative. |
 
 ## How to use these
 

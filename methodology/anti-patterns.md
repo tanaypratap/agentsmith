@@ -14,7 +14,7 @@ Each entry: **Pattern** (what people do) → **Why it's wrong** (what breaks) �
 
 **Evidence.** v0.1 AX blocker B1 (systematic path ambiguity across `pm-setup.md`, `compaction.md`, `collaboration.md`, `how-pms-work.md`); live-confirmed by v0.1 PM-session E2E friction F1 (from the PM-session friction log, distinct from the setup-E2E log's F1 on plugin checklist) — "bare paths don't resolve from repo root," rated major.
 
-**The fix.** Three branches, one rule: sibling references within the same directory use bare filename; cross-directory references inside `.agentsmith/` use the full `.agentsmith/`-rooted form; references to repo-root content outside `.agentsmith/` (like the agentsmith repo's own `examples/`) use the repo-root-relative form. See principle #9 in `principles.md` for the full statement.
+**The fix.** Apply the sibling-path-style rule. See principle #9 in `principles.md` for the full convention (one rule, three branches); do not restate it inline.
 
 **See also.** `principles.md` principle #9 (sibling-path style); `validation-loops.md`.
 
