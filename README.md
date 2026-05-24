@@ -11,6 +11,16 @@ agentsmith carries two things:
 
 When set up in a repo, it creates a local `.agentsmith/` folder holding the methodology, the templates, and a scratch area — so any agent working that repo can read how to operate without fetching anything.
 
+## Cloning / setting up agentsmith locally
+
+agentsmith is its own repo — keep it that way; do not copy its source into other repos. To use it from any workspace, clone it once per machine:
+
+```
+git clone https://github.com/tanaypratap/agentsmith.git ~/github/agentsmith
+```
+
+That is the only setup agentsmith itself needs. From there, point an agent at the clone — `setup.md` bootstraps a target repo, `.agentsmith/start-here.md` runs every PM session after. See "The two ways you use it" below.
+
 ## The two ways you use it
 
 A fresh agent cannot detect agentsmith on its own — your instruction routes it.
