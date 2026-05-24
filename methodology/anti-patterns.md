@@ -112,9 +112,9 @@ Each entry: **Pattern** (what people do) → **Why it's wrong** (what breaks) �
 
 **Evidence.** This is a *preventive* anti-pattern — the discipline against it shows up in agentsmith's design choices, not in a single failed finding. The closest concrete analog in the v0.2 trail is the ticket-review's MF1: when five different tickets (#11, #12, #14, #16, #17) all needed to edit `pm-setup.md`, the review required all five edits to land in **one wave on one agent** so re-sequencing and step rewrites by different agents could not silently conflict. That is the same discipline (one canonical home, everything else coordinates with it) applied to *file editing* rather than to *content authoring*. The general rule is enforced inside the docs themselves by `docs-review.md`'s **scope coherence** dimension, which scores duplicate-canonical-content as a defect.
 
-**The fix.** Every concept has ONE canonical home. Everything else points at it. A new methodology file's job is a job no existing file already does; where it overlaps with an existing file, it cross-links. `docs-review.md`'s accuracy/no-rot dimension makes this a scored rubric criterion.
+**The fix.** Every concept has ONE canonical home. Everything else points at it. A new methodology file's job is a job no existing file already does; where it overlaps with an existing file, it cross-links. `docs-review.md`'s scope-coherence dimension makes this a scored rubric criterion.
 
-**See also.** `docs-review.md` (accuracy / no-rot dimension); `principles.md` principle #8.
+**See also.** `docs-review.md` (scope-coherence dimension — the canonical enforcement).
 
 ---
 
