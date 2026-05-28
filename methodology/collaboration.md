@@ -51,3 +51,7 @@ An Open Ask is a cross-PM request: who → whom, what, status. Mark it **closed*
 - Each PM owns a lane; lanes should not overlap. If they do, sort it on the board — do not collide.
 - Sync on the board at the start of each work block, and at least every ~15 minutes during active multi-PM work — read others' updates before continuing.
 - The board is gitignored scratch; it survives crashes on disk but is not committed.
+
+## When the other PM is on a different machine
+
+The board only works when all active PMs share a checkout. When at least one PM runs on a different machine — or when the human is steering each PM separately on their own machine — the board is no longer enough. See `cross-machine-collaboration.md` for the relay-and-reconcile protocol that extends this file to the cross-machine case.
